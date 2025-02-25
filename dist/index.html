@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf=8" />
+    <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="./css/index.css" rel="stylesheet" />
+    <title>CRUD</title>
+  </head>
+  <body>
+    <h1 class="title">ToDo</h1>
+    <section class="section-macin">
+      <form onchange="submit" class="form">
+        <input
+          type="text"
+          name="title"
+          placeholder="Título"
+          class="form-text"
+        />
+        <textarea
+          name="description"
+          placeholder="Descrição"
+          class="form-description"
+        ></textarea>
+        <button type="submit" class="form-button">Salvar</button>
+      </form>
+    </section>
+
+    <ul class="list">
+      <li class="list-item">
+        <div class="list-item-div">
+          <h3 class="list-title">Ir as compras</h3>
+          <p class="list-description">
+            Fazer as compras de itens essenciais para a semana.
+          </p>
+        </div>
+        <div class="list-buttons">
+          <button class="list-edit">Editar</button>
+          <button class="list-delete">Exluir</button>
+        </div>
+      </li>
+    </ul>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
