@@ -1,6 +1,6 @@
 import Tarefa from "../types/Tarefa.js";
 
-const lista: HTMLUListElement = document.querySelector(".list");
+export const lista: HTMLUListElement = document.querySelector(".list");
 
 function carregarTarefas() {
   const tarefasSalvas: Tarefa[] =
@@ -21,10 +21,12 @@ export function adicionarTarefaAoDOM(tarefa: Tarefa) {
           </div>
           <div class="list-buttons">
             <button class="list-edit">Editar</button>
-            <button class="list-delete" onclick="removerTarefa('${tarefa.id}')">Excluir</button>
+            <button class="list-delete" id="button-delete" >Excluir</button>
           </div>
       </li>
     `;
 }
+
+// onclick="removerTarefa('${tarefa.id}')"
 
 document.addEventListener("DOMContentLoaded", carregarTarefas);

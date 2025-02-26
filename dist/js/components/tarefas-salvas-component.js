@@ -1,4 +1,4 @@
-const lista = document.querySelector(".list");
+export const lista = document.querySelector(".list");
 function carregarTarefas() {
     const tarefasSalvas = JSON.parse(localStorage.getItem("tarefas")) || [];
     tarefasSalvas.forEach((tarefa) => {
@@ -16,9 +16,10 @@ export function adicionarTarefaAoDOM(tarefa) {
           </div>
           <div class="list-buttons">
             <button class="list-edit">Editar</button>
-            <button class="list-delete" onclick="removerTarefa('${tarefa.id}')">Excluir</button>
+            <button class="list-delete" id="button-delete" >Excluir</button>
           </div>
       </li>
     `;
 }
+// onclick="removerTarefa('${tarefa.id}')"
 document.addEventListener("DOMContentLoaded", carregarTarefas);
