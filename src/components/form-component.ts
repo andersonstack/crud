@@ -1,3 +1,7 @@
+import Tarefa from "../types/Tarefa.js";
+import { gerarId } from "../utils/gerar-id.js";
+import { novaTarefa } from "./list-component.js";
+
 let $ = document.querySelector.bind(document);
 
 const buttonForm: HTMLButtonElement = $("#form-button");
@@ -6,5 +10,10 @@ const inputDescription: HTMLTextAreaElement = $("#description");
 
 buttonForm.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(inputTitle.value, inputDescription.value);
+  const newTarefa: Tarefa = {
+    id: gerarId(),
+    title: inputTitle.value,
+    description: inputDescription.value,
+  };
+  novaTarefa(newTarefa);
 });
