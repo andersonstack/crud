@@ -7,6 +7,7 @@ let $ = document.querySelector.bind(document);
 const buttonForm: HTMLButtonElement = $("#form-button");
 const inputTitle: HTMLInputElement = $("#title");
 const inputDescription: HTMLTextAreaElement = $("#description");
+const form: HTMLFormElement = $("#form");
 
 buttonForm.addEventListener("click", (e) => {
   e.preventDefault();
@@ -16,4 +17,5 @@ buttonForm.addEventListener("click", (e) => {
     description: inputDescription.value,
   };
   novaTarefa(newTarefa);
+  form.reset();
 });
